@@ -1,0 +1,9 @@
+body {
+  background: black;
+  overflow: hidden;
+  font: 5vw/100vh "Finger Paint";
+  text-align: center;
+  color: transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}

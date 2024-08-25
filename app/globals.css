@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+
+@font-face {
+  font-family: Nohemi;
+  src: url(/fonts/Nohemi-Thin.ttf);
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: Nohemi;
+  src: url(/fonts/Nohemi-ExtraLight.ttf);
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: Nohemi;
+  src: url(/fonts/Nohemi-Light.ttf);
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: Nohemi;
+  src: url(/fonts/Nohemi-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Nohemi;
+  src: url(/fonts/Nohemi-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Nohemi;
+  src: url(/fonts/Nohemi-SemiBold.ttf);
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Nohemi;
+  src: url(/fonts/Nohemi-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: Nohemi;
+  src: url(/fonts/Nohemi-ExtraBold.ttf);
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: Nohemi;
+  src: url(/fonts/Nohemi-Black.ttf);
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: Karma;
+  src: url(/fonts/Karma.ttf);
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  font-family: Nohemi, sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+* {
+  font-family: Karma;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.MuiDialog-paper {
+  width: 100% !important;
+  max-width: 500px !important;
+  margin: 0 !important;
+  margin-top: auto !important;
+  margin-bottom: 0px !important;
+  background-color: white !important;
+  border-top-left-radius: 24px !important;
+  border-top-right-radius: 24px !important;
+}
+
+.MuiDialogContent-root {
+  padding: 20px !important;
+  padding-top: 50px !important;
+}
+
+.MuiDialog-paper * {
+  font-family: Nohemi, sans-serif !important;
+}
+
+body {
+  max-width: 500px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+}
+
+#__next {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+}
+
+.text-base,
+.text-xs {
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+}
+
+#ton-connect-button button {
+  background-color: #048dff !important;
+}
+
+#ton-connect-button button * {
+  font-family: Nohemi, system-ui, sans-serif !important;
+}
+
+.coingroup:active > div:first-of-type {
+  transform: scale(1.05) rotateY(45deg) !important;
+}
+
+.gradient-text {
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-image: linear-gradient(90deg, #0075FF, #86BEFF); */
+  color: #86beff;
+}
+#spanText {
+  display: inline-block;
+  text-shadow: 0 0 0 whitesmoke;
+  -webkit-animation: smoky 10s 5s both infinite;
+  animation: smoky 10s 1s both infinite;
+}
+
+#spanText:nth-child(even) {
+  -webkit-animation-name: smoky-mirror;
+  animation-name: smoky-mirror;
+}
+
+@-webkit-keyframes smoky {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@keyframes smoky {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg)
+      scale(2);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+@keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg)
+      scale(2);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+#spanText:nth-of-type(1) {
+  -webkit-animation-delay: 3.1s;
+  animation-delay: 3.1s;
+}
+
+#spanText:nth-of-type(2) {
+  -webkit-animation-delay: 3.2s;
+  animation-delay: 3.2s;
+}
+
+#spanText:nth-of-type(3) {
+  -webkit-animation-delay: 3.3s;
+  animation-delay: 3.3s;
+}
+
+#spanText:nth-of-type(4) {
+  -webkit-animation-delay: 3.4s;
+  animation-delay: 3.4s;
+}
+html {
+  --noise-size: 0.001px;
+  --tile-size: 120px;
+  background-image: repeating-radial-gradient(
+      50px at top left,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    ),
+    repeating-radial-gradient(
+      50px at top right,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    ),
+    repeating-radial-gradient(
+      50px at bottom left,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    ),
+    repeating-radial-gradient(
+      50px at bottom right,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    );
+  background-size: var(--tile-size) var(--tile-size);
+}

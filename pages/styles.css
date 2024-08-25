@@ -1,0 +1,76 @@
+/* .hhh {
+  --noise-size: 0.001px;
+  --tile-size: 120px;
+  background-image: repeating-radial-gradient(
+      50px at top left,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    ),
+    repeating-radial-gradient(
+      50px at top right,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    ),
+    repeating-radial-gradient(
+      50px at bottom left,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    ),
+    repeating-radial-gradient(
+      50px at bottom right,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    );
+  background-size: var(--tile-size) var(--tile-size);
+} */
+
+/* .hhh {
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #112c71, #0a2353);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle at top left, #5b58eb 30%, #56e1e9 110%);
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    left: -20%;
+    top: -20%;
+    filter: blur(150px);
+    animation: blobify 7s ease-in-out 0s infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle at bottom right, #4ecaff, #5b58eb 90%);
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    right: -15%;
+    bottom: -30%;
+    filter: blur(150px);
+    animation: blobify 10s ease-in-out 0s infinite;
+  }
+}
+
+@keyframes blobify {
+  0% {
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+
+  50% {
+    border-radius: 30% 70% 70% 30% / 40% 60% 40% 60%;
+    transform: translateX(100px) translateY(100px) scale(1.2);
+  }
+
+  100% {
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+} */
